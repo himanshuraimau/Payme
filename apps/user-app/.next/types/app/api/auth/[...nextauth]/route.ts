@@ -1,4 +1,4 @@
-// File: /home/himanshu/Desktop/Payme/apps/user-app/app/api/auth/[...nextauth]/route.ts
+// File: /home/himanshu/code/Payme/apps/user-app/app/api/auth/[...nextauth]/route.ts
 import * as entry from '../../../../../../app/api/auth/[...nextauth]/route.js'
 import type { NextRequest } from 'next/server.js'
 
