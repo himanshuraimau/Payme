@@ -9,23 +9,35 @@ export function SendCard() {
     const [number, setNumber] = useState("");
     const [amount, setAmount] = useState("");
 
-    return <div className="h-[90vh]">
-        <Center>
-            <Card title="Send">
-                <div className="min-w-72 pt-2">
-                    <TextInput placeholder={"Number"} label="Number" onChange={(value) => {
-                        setNumber(value)
-                    }} />
-                    <TextInput placeholder={"Amount"} label="Amount" onChange={(value) => {
-                        setAmount(value)
-                    }} />
-                    <div className="pt-4 flex justify-center">
-                        <Button onClick={() => {
+    const handleSend = () => {
+        // Implement send functionality here
+        console.log(`Sending ${amount} INR to ${number}`);
+        // Reset form fields
+        setNumber("");
+        setAmount("");
+    };
 
-                        }}>Send</Button>
+    return (
+        <div className="h-[90vh]">
+            <Center>
+                <Card title="Send">
+                    <div className="min-w-72 pt-2">
+                        <TextInput
+                            placeholder="Number"
+                            label="Number"
+                            onChange={(value) => setNumber(value)}
+                        />
+                        <TextInput
+                            placeholder="Amount"
+                            label="Amount"
+                            onChange={(value) => setAmount(value)}
+                        />
+                        <div className="pt-4 flex justify-center">
+                            <Button onClick={handleSend}>Send</Button>
+                        </div>
                     </div>
-                </div>
-            </Card>
-        </Center>
-    </div>
+                </Card>
+            </Center>
+        </div>
+    );
 }
