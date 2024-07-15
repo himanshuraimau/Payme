@@ -33,6 +33,11 @@ async function getOnRampTransactions() {
     }));
 }
 
+/**
+ * Renders the Transfer page.
+ * 
+ * @returns The Transfer page component.
+ */
 export default async function TransferPage() {
     const fetchData = async () => {
         const balance = await getBalance();
